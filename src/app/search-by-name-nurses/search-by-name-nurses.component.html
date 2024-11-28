@@ -1,0 +1,16 @@
+<form [formGroup]="searchName" (submit)="submitSearch()">
+    <label for="name" id="nameLabel"> NAME </label>
+    <input type="text" formControlName="name" id="nameInput">
+    <button type="submit" id="button"> CLICK ME</button>
+</form>
+
+@if(searched){
+<div id="correct"> 
+    <p class="valores">First Name > {{nameSearched}} </p><br>
+    <p class="valores">Last Name > {{lastName}} </p><br>
+    <p class="valores">Email > {{email}} </p><br>
+</div>
+}
+@else {
+<div id="incorrect"> NO ENCONTRADO</div>
+}

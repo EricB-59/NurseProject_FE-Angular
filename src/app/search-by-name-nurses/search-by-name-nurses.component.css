@@ -1,0 +1,89 @@
+form {
+    background-color: #eaf3fc; 
+    border: 2px solid #6F9CDE;
+    border-radius: 10px; 
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    font-family: Arial, sans-serif; 
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1E3559; 
+  }
+  
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #6F9CDE;
+    border-radius: 5px;
+    box-sizing: border-box; 
+    font-size: 16px;
+    margin-bottom: 15px;
+    background-color: #ffffff; 
+  }
+  
+ 
+  input[type="text"]:focus {
+    border-color: #417ABD; 
+    outline: none;
+    background-color: #f0f8ff; 
+  }
+  
+ 
+  button {
+    background-color: #6F9CDE; 
+    color: #ffffff; 
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+  }
+  
+  button:hover {
+    background-color: #417ABD; 
+  
+  button:active {
+    background-color: #315B8C; 
+  }
+}
+
+
+div {
+    background-color: #ffffff; 
+    border: 2px solid #6F9CDE; 
+    border-radius: 10px; 
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 400px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center; 
+    font-family: Arial, sans-serif; 
+    font-size: 16px; 
+    color: #1E3559; 
+  }
+  
+  #correct {
+    background-color: #a4fcb4; 
+    color: #000000; 
+  }
+  
+ 
+  #incorrect {
+    background-color: #ffb8b8;
+    color: #000000; 
+  }
+
+  .valores{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1E3559;
+  }
