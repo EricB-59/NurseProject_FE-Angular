@@ -1,0 +1,53 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 20px;
+    text-align: left;
+    background-color: #ffffff; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+  /* Cabeceras */
+  th {
+    background-color: #6F9CDE; 
+    color: #ffffff; 
+    padding: 15px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #5C87C9; 
+  }
+  
+  /* Filas de la tabla */
+  td {
+    padding: 12px 15px;
+    color: #333333; 
+    border-bottom: 1px solid #e0e4eb; 
+    font-size: 20px;
+  }
+  
+  /* Alternancia de color en las filas */
+  tr:nth-child(even) {
+    background-color: #f7faff; /* Azul muy claro */
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #ffffff; /* Blanco */
+  }
+  
+  /* Hover en las filas */
+  tr:hover {
+    background-color: #E2EBF7; /* Azul suave al pasar el mouse */
+    cursor: pointer;
+  }
+  
+  /* Icono adicional en la cabecera */
+  th:first-child::before {
+    content: '🩺 '; /* Icono de estetoscopio */
+  }
+  
+  /* Iconos en los nombres */
+  td:first-child::before {
+    content: '💉 '; /* Icono de jeringa */
+    margin-right: 5px;
+  }
