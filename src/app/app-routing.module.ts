@@ -5,6 +5,7 @@ import { SearchByNameNursesComponent } from './search-by-name-nurses/search-by-n
 
 const routes: Routes = [
   { path: 'getAll', component: GetAllNursesComponent },
+  { path: 'login', component: GetAllNursesComponent },
   { path: 'searchByName', component: SearchByNameNursesComponent },
 ];
 
