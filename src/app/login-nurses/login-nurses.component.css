@@ -49,3 +49,28 @@ h1{
     box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
     cursor: pointer;
 }
+
+#correct {
+    background-color: #a4fcb4; 
+    color: #000000; 
+  }
+  
+ 
+  #incorrect {
+    background-color: #ffb8b8;
+    color: #000000; 
+  }
+
+  .respuesta{
+    background-color: #ffffff; 
+    border: 2px solid #6F9CDE; 
+    border-radius: 10px; 
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 400px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center; 
+    font-family: Arial, sans-serif; 
+    font-size: 16px; 
+    color: #1E3559; 
+  }

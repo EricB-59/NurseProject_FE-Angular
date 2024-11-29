@@ -25,7 +25,7 @@ export class LoginNursesComponent {
       }
     });
     if (!this.existe) {
-      console.log('No se encontró el nombre');
+      console.log('Email o contraseña incorrecto');
     }
   }
 }
