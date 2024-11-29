@@ -1,4 +1,19 @@
 # NurseProjectFEAngular
+#####  Participants:
+
+- Eric Baena Canto :man:
+- Guillem Sánchez Oliveras :man:
+- Victor Manuel Lucumi Grueso :man:
+- Joel Mesas Hontoria :man:
+
+## Description 📰
+
+The propouse of the project is to manage and controll a group of nurses from a hospital. We manage their information and save it to follow up about their updates. In this project we apply a CRUD for the doctors where you can **create**, **read**, **update** and **delete** them. Also, we work with a cloud database where we save all the information.
+
+
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
 
