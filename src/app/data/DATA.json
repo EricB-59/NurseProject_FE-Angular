@@ -58,5 +58,11 @@
         "last_name": "Nappin",
         "email": "enappin9@yelp.com",
         "password": "zC9&H9G))"
+    },
+    {
+        "first_name": "Guillem",
+        "last_name": "Sanchez",
+        "email": "guillemsanchez@gmail.com",
+        "password": "123456"
     }
 ]
