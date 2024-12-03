@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import jsonData from '../data/DATA.json';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
@@ -27,8 +27,10 @@ export class SearchByNameNursesComponent {
     this.lastName = '';
     this.email = '';
 
+
+
     this.users.forEach((user) => {
-      if(this.searchName.value.name === user.first_name){
+      if(this.searchName.value.name?.toLowerCase() === user.first_name.toLowerCase()){
         this.searched = true;
         this.nameSearched = user.first_name;
         this.lastName = user.last_name;
