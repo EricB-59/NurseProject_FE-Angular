@@ -8,6 +8,7 @@ import { SearchByNameNursesComponent } from './search-by-name-nurses/search-by-n
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginNursesComponent } from './login-nurses/login-nurses.component';
 import { provideRouter } from '@angular/router';
+import { RegisterNursesComponent } from './register-nurses/register-nurses.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { provideRouter } from '@angular/router';
     SearchByNameNursesComponent,
     GetAllNursesComponent,
     LoginNursesComponent,
+    RegisterNursesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
