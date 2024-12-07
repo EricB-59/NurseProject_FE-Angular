@@ -1,34 +1,46 @@
 <form [formGroup]="form" (submit)="register()">
-    <label>
-        First Name:
-        <br>
-        <input type="text" formControlName="first_name" placeholder="First name">
-    </label>
-    <br> <br>
-    <label>
-        Last Name:
-        <br>
-        <input type="text" formControlName="last_name" placeholder="Last name">
-    </label>
-    <br> <br>
-    <label>
-        Email:
-        <br>
-        <input type="email" formControlName="email" placeholder="Email">
-    </label>
-    <br> <br>
-    <label>
-        Password:
-        <br>
-        <input type="password" formControlName="password" placeholder="Password">
-    </label>
-    <br> <br>
-    <label>
-        Repeat Password:
-        <br>
-        <input type="password" formControlName="repeat_password" placeholder="Repeat Password">
-    </label>
-    <br> <br>
-    <button type="submit">Register</button>
+  <label>
+    First Name:
+    <br />
+    <input type="text" formControlName="first_name" placeholder="First name" />
+  </label>
+  <br />
+  <br />
+  <label>
+    Last Name:
+    <br />
+    <input type="text" formControlName="last_name" placeholder="Last name" />
+  </label>
+  <br />
+  <br />
+  <label>
+    Email:
+    <br />
+    <input type="email" formControlName="email" placeholder="Email" />
+  </label>
+  <br />
+  <br />
+  <label>
+    Password:
+    <br />
+    <input type="password" formControlName="password" placeholder="Password" />
+  </label>
+  <br />
+  <br />
+  <label>
+    Repeat Password:
+    <br />
+    <input
+      type="password"
+      formControlName="repeat_password"
+      placeholder="Repeat Password"
+    />
+  </label>
+  <br />
+  <br />
+  <button type="submit">Register</button>
 </form>
 
+@if(existe){
+<div class="respuesta" id="correct">REGISTRADO CORRECTAMENTE</div>
+}
