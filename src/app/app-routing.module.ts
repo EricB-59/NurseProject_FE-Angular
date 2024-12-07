@@ -6,6 +6,7 @@ import { LoginNursesComponent } from './login-nurses/login-nurses.component';
 import { RegisterNursesComponent } from './register-nurses/register-nurses.component';
 
 const routes: Routes = [
+  { path: '', component: RegisterNursesComponent },
   { path: 'getAll', component: GetAllNursesComponent },
   { path: 'login', component: LoginNursesComponent },
   { path: 'register', component: RegisterNursesComponent },
