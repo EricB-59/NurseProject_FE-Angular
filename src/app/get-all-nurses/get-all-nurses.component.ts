@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import jsonData from '../data/DATA.json';
 import { NurseService } from '../nurses/nurse.service';
 @Component({
   selector: 'app-get-all-nurses',
@@ -8,11 +7,10 @@ import { NurseService } from '../nurses/nurse.service';
   providers: [NurseService]
 })
 export class GetAllNursesComponent implements OnInit {
-  nurses: any[] = jsonData; 
+  nurses: any[] = [];
   constructor(private nurseService: NurseService) {}
   ngOnInit(): void {
-    this.nurseService.getAllNurses();
-    console.log(this.nurseService.getAllNurses());
+    this.nurses = this.nurseService.getAllNurses();
   }
 
 }
