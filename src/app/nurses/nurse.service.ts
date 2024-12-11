@@ -21,7 +21,7 @@ export class NurseService {
 
   }
 
-  searchByNameNurse() {
-
+  searchByNameNurse(first_name: any) {
+      return this.nurses.find(nurse => nurse.first_name === first_name);
   }
 }
