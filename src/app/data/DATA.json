@@ -3,72 +3,95 @@
     "first_name": "Isaak",
     "last_name": "Struther",
     "email": "istruther0@webs.com",
-    "password": "jS2~1Ty.TY3TUC}"
+    "password": "jS2~1Ty.TY3TUC}",
+    "src": "/img/foto1.png"
   },
   {
     "first_name": "Thaddus",
     "last_name": "Cobleigh",
     "email": "tcobleigh1@gmpg.org",
-    "password": "pF8@IVRR"
+    "password": "pF8@IVRR",
+    "src": "/img/foto1.png"
+
   },
   {
     "first_name": "Evangelia",
     "last_name": "Oley",
     "email": "eoley2@mapquest.com",
-    "password": "dV0`)>2%"
+    "password": "dV0`)>2%",
+    "src": "/img/foto1.png"
+
   },
   {
     "first_name": "Marcus",
     "last_name": "Jeannot",
     "email": "mjeannot3@prnewswire.com",
-    "password": "rN1.y(.k'(S"
+    "password": "rN1.y(.k'(S",
+    "src": "/img/foto1.png"
+
   },
   {
     "first_name": "Liana",
     "last_name": "Devennie",
     "email": "ldevennie4@delicious.com",
-    "password": "xZ1$(x8v"
+    "password": "xZ1$(x8v",
+    "src": "/img/foto1.png"
+
   },
   {
     "first_name": "Dunstan",
     "last_name": "Willgrass",
     "email": "dwillgrass5@ox.ac.uk",
-    "password": "vA9}*_h0ds',f*"
+    "password": "vA9}*_h0ds',f*",
+    "src": "/img/foto1.png"
+
   },
   {
     "first_name": "Quintana",
     "last_name": "Lusher",
     "email": "qlusher6@ezinearticles.com",
-    "password": "qW4&GuRGxIsAjN7"
+    "password": "qW4&GuRGxIsAjN7",
+    "src": "/img/foto1.png"
+
   },
   {
     "first_name": "Hashim",
     "last_name": "Ewenson",
     "email": "hewenson7@auda.org.au",
-    "password": "iA9`PBTXJDAe>\\"
+    "password": "iA9`PBTXJDAe>\\",
+    "src": "/img/foto1.png"
+
   },
   {
     "first_name": "Devondra",
     "last_name": "Fairbrace",
     "email": "dfairbrace8@indiegogo.com",
-    "password": "zA6'EiUgk+MhPJ9"
+    "password": "zA6'EiUgk+MhPJ9",
+    "src": "/img/foto1.png"
+
   },
   {
     "first_name": "Elias",
     "last_name": "Nappin",
     "email": "enappin9@yelp.com",
-    "password": "zC9&H9G))"
+    "password": "zC9&H9G))",
+    "src": "/img/foto1.png"
+
   },
   {
     "first_name": "Guillem",
     "last_name": "Sanchez",
     "email": "guillemsanchez@gmail.com",
-    "password": "123456"
+    "password": "123456",
+    "src": "/img/foto1.png"
+
   },
   {
     "first_name": "admin",
     "last_name": "admin",
     "email": "admin@gmail.com",
-    "password": "1234"
+    "password": "1234",
+    "src": "/img/foto1.png"
+
   }
 ]
