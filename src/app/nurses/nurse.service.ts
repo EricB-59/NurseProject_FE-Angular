@@ -5,12 +5,11 @@ import jsonData from '../data/DATA.json';
   providedIn: 'root'
 })
 export class NurseService {
-  constructor() { }
 
   nurses: any[] = jsonData;
 
   getAllNurses() {
-
+    return this.nurses;
   }
 
   registerNurse() {
