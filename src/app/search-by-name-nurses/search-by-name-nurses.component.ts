@@ -14,12 +14,14 @@ export class SearchByNameNursesComponent {
 
   nurseService : NurseService = inject(NurseService);
 
+  nurse: any;
+
 
   searchName = new FormGroup({
     name: new FormControl('')
   });
 
-
+  searched: boolean = false;
   nameSearched: String = '';
   lastName: String = '';
   email: String = '';
@@ -28,19 +30,18 @@ export class SearchByNameNursesComponent {
     this.nameSearched = '';
     this.lastName = '';
     this.email = '';
+    this.searched = false;
 
-    nurseService.searchByNameNurse(this.form.value.name);
+    this.nurse = this.nurseService.searchByNameNurse(this.searchName.value.name?.toUpperCase());
 
-    if(this.searchName.value.name?.toLowerCase() === user.first_name.toLowerCase()){
-        this.searched = true;
-        this.nameSearched = user.first_name;
-        this.lastName = user.last_name;
-        this.email = user.email;
-
-    }
-
-    if(!this.searched){
-      console.log("NO ENCONTRADO")
+    if (this.nurse === undefined){
+      console.log("NO ENCONTRADO");
+      return;
+    } else {
+      this.searched = true;
+      this.nameSearched = this.nurse['first_name'];
+      this.lastName = this.nurse['last_name'];
+      this.email = this.nurse['email'];
     }
 
   }

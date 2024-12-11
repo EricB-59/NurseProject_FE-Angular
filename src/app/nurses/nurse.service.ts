@@ -22,6 +22,6 @@ export class NurseService {
   }
 
   searchByNameNurse(first_name: any) {
-      return this.nurses.find(nurse => nurse.first_name === first_name);
+      return this.nurses.find(nurse => nurse.first_name.toUpperCase() === first_name);
   }
 }
