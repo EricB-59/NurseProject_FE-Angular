@@ -8,7 +8,7 @@ export class NurseService {
   nurses: any[] = jsonData;
 
   getAllNurses() {
-
+    return this.nurses;
   }
 
   registerNurse() {
