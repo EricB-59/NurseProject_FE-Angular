@@ -19,7 +19,7 @@ export class NurseService {
     return this.nurses.find(user => user.email === email && user.password === password);
   }
 
-  searchByNameNurse() {
-
+  searchByNameNurse(first_name: any) {
+      return this.nurses.find(nurse => nurse.first_name.toUpperCase() === first_name);
   }
 }
