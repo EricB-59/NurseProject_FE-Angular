@@ -1,31 +1,37 @@
-import { Component } from '@angular/core';
-import jsonData from '../data/DATA.json';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import {Component, inject} from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import {NurseService} from '../nurses/nurse.service';
 
 @Component({
   selector: 'app-login-nurses',
   templateUrl: './login-nurses.component.html',
-  styleUrl: './login-nurses.component.css'
+  styleUrl: './login-nurses.component.css',
+  providers: [NurseService],
 })
 export class LoginNursesComponent {
-  nurses: any[] = jsonData;
+  existe: boolean = false;
+  email: any = '';
+  password: any = '';
+  alumne: any;
+  nurseService:NurseService = inject(NurseService);
 
   form = new FormGroup({
     email: new FormControl(''),
     password: new FormControl('')
   });
-  existe:boolean = false;
-
 
   login(){
     this.existe = false;
-    this.nurses.forEach(element => {
-      if (element.email == this.form.value.email && element.password == this.form.value.password) {
-        this.existe = true;
-      }
-    });
-    if (!this.existe) {
+    this.email = this.form.value.email;
+    this.password = this.form.value.password;
+
+    this.alumne = this.nurseService.loginNurse(this.email, this.password);
+
+    if (this.alumne === undefined) {
       console.log('Email o contraseña incorrecto');
+      return;
+    } else {
+      this.existe = true;
     }
   }
 }

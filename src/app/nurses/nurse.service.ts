@@ -5,7 +5,6 @@ import jsonData from '../data/DATA.json';
   providedIn: 'root'
 })
 export class NurseService {
-
   nurses: any[] = jsonData;
 
   getAllNurses() {
@@ -16,8 +15,8 @@ export class NurseService {
 
   }
 
-  loginNurse(){
-
+  loginNurse(email: any, password: any) {
+    return this.nurses.find(user => user.email === email && user.password === password);
   }
 
   searchByNameNurse() {
