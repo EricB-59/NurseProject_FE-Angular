@@ -1,0 +1,155 @@
+form {
+    min-width: 300px;
+    max-width: 35%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2rem 3rem;
+    border-radius: 2.5rem;
+    background-color: #ecf0f3;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+    color: black;
+    margin-top: 10rem;
+    font-family: Arial, sans-serif;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    color: #1E3559;
+    margin-bottom: 0.5rem;
+}
+
+form {
+    min-width: 300px;
+    max-width: 31%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2rem 3rem;
+    border-radius: 2.5rem;
+    background-color: #ecf0f3;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+    color: black;
+    margin-top: 10rem;
+    font-family: Arial, sans-serif;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    color: #1E3559;
+    margin-bottom: 0.5rem;
+}
+
+form input {
+    display: block;
+    margin: 1rem auto;
+    width: 90%; 
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border: none;
+    box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+    background: #ebf5fc;
+    font-size: 1rem;
+    color: #1E3559;
+}
+
+form input::placeholder {
+    color: #6F9CDE;
+}
+
+form button {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border: none;
+    font-size: 0.875rem;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #6F9CDE;
+    width: 90%; /* Ajuste para alinearse con los inputs */
+    display: block;
+    padding: 0.875rem 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #547bbd;
+    transform: scale(1.02);
+}
+
+#correct {
+    background-color: #a4fcb4;
+    color: #000000;
+}
+
+#incorrect {
+    background-color: #ffb8b8;
+    color: #000000;
+}
+
+.respuesta {
+    background-color: #ffffff;
+    border: 2px solid #6F9CDE;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #1E3559;
+}
+
+
+form input::placeholder {
+    color: #6F9CDE;
+}
+
+form button {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border: none;
+    font-size: 0.875rem;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #6F9CDE;
+    width: 100%;
+    display: block;
+    padding: 0.875rem 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #547bbd;
+    transform: scale(1.02);
+}
+
+#correct {
+    background-color: #a4fcb4;
+    color: #000000;
+}
+
+#incorrect {
+    background-color: #ffb8b8;
+    color: #000000;
+}
+
+.respuesta {
+    background-color: #ffffff;
+    border: 2px solid #6F9CDE;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #1E3559;
+}
