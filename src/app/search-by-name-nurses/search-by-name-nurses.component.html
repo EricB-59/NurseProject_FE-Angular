@@ -1,3 +1,8 @@
+<nav>
+    <a class="button" routerLink="/getAll">GetAll</a>
+    <a class="button" id="logout" routerLink="/register">Logout</a>
+</nav>
+
 <form [formGroup]="searchName" (submit)="submitSearch()">
     <label for="name" id="nameLabel"> NAME </label>
     <input type="text" formControlName="name" id="nameInput">
