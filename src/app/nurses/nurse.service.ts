@@ -11,8 +11,14 @@ export class NurseService {
     return this.nurses;
   }
 
-  registerNurse() {
-
+  registerNurse(first_name: any, last_name: any, email: any, password: any) {
+      let nurse = {
+        first_name: first_name,
+        last_name: last_name,
+        email: email,
+        password: password
+      };
+      console.log(nurse);
   }
 
   loginNurse(email: any, password: any) {
