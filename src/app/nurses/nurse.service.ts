@@ -16,5 +16,13 @@ export class NurseService {
       }
     );
   }
+  deleteById(id:number) {
+    let url = `http://localhost:8000/nurse/deleteById/${id}`;
+    return this.http.delete(
+      url, {
+        headers: new HttpHeaders({'Content-Type': 'application/json'})
+      }
+    );
+  }
 
 }
