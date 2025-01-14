@@ -9,7 +9,7 @@ export class NurseService {
   constructor(private http: HttpClient) {}
 
   getAllNurses() {
-    let url = 'https://localhost:8000/nurse/getAll';
+    let url = 'http://localhost:8000/nurse/getAll';
     return this.http.get(
       url, {
         headers: new HttpHeaders({'Content-Type': 'application/json'})
