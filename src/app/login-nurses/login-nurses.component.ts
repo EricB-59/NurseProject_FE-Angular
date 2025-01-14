@@ -1,7 +1,7 @@
 import {Component, inject} from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+/*import { FormControl, FormGroup } from '@angular/forms';*/
 import {NurseService} from '../nurses/nurse.service';
-import { Router } from '@angular/router';
+/*import { Router } from '@angular/router';*/
 @Component({
   selector: 'app-login-nurses',
   templateUrl: './login-nurses.component.html',
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   providers: [NurseService],
 })
 export class LoginNursesComponent {
-  constructor(private router: Router) {}
+  /*constructor(private router: Router) {}
   existe: boolean = false;
   email: any = '';
   password: any = '';
@@ -35,5 +35,5 @@ export class LoginNursesComponent {
       this.existe = true;
       this.router.navigate(['/getAll']);
     }
-  }
+  }*/
 }

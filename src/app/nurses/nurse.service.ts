@@ -1,31 +1,20 @@
 import { Injectable } from '@angular/core';
-import jsonData from '../data/DATA.json';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class NurseService {
-  nurses: any[] = jsonData;
+  constructor(private http: HttpClient) {}
 
   getAllNurses() {
-    return this.nurses;
+    let url = 'https://localhost:8000/nurse/getAll';
+    return this.http.get(
+      url, {
+        headers: new HttpHeaders({'Content-Type': 'application/json'})
+      }
+    );
   }
 
-  registerNurse(first_name: any, last_name: any, email: any, password: any) {
-      let nurse = {
-        first_name: first_name,
-        last_name: last_name,
-        email: email,
-        password: password
-      };
-      console.log(nurse);
-  }
-
-  loginNurse(email: any, password: any) {
-    return this.nurses.find(user => user.email === email && user.password === password);
-  }
-
-  searchByNameNurse(first_name: any) {
-      return this.nurses.find(nurse => nurse.first_name.toUpperCase() === first_name);
-  }
 }

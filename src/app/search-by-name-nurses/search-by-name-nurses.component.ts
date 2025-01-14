@@ -11,6 +11,7 @@ import { NurseService } from '../nurses/nurse.service';
 
 
 export class SearchByNameNursesComponent {
+/*
 
   nurseService : NurseService = inject(NurseService);
 
@@ -45,5 +46,6 @@ export class SearchByNameNursesComponent {
     }
 
   }
+*/
 
 }

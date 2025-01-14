@@ -9,6 +9,7 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginNursesComponent } from './login-nurses/login-nurses.component';
 import { provideRouter } from '@angular/router';
 import { RegisterNursesComponent } from './register-nurses/register-nurses.component';
+import {provideHttpClient, withFetch} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { RegisterNursesComponent } from './register-nurses/register-nurses.compo
     RegisterNursesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
-  providers: [],
+  providers: [provideHttpClient(withFetch())],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
