@@ -11,7 +11,6 @@ import { NurseService } from '../nurses/nurse.service';
 
 
 export class SearchByNameNursesComponent {
-constructor (n)
 /*
 
   nurseService : NurseService = inject(NurseService);
