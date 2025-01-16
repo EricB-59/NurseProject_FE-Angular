@@ -24,12 +24,12 @@ export class RegisterNursesComponent {
 
   register() {
     if (this.form.value.password == this.form.value.repeat_password) {
-      let nurse = new Nurse(
-        this.form.value.first_name as string,
-        this.form.value.last_name as string,
-        this.form.value.email as string,
-        this.form.value.password as string
-      );
+      let nurse = new Nurse({
+        first_name: this.form.value.first_name as string,
+        last_name: this.form.value.last_name as string,
+        email: this.form.value.email as string,
+        password: this.form.value.password as string,
+      });
       this._userService.registerNurse(nurse).subscribe((result) => {
         console.log(result);
       });
