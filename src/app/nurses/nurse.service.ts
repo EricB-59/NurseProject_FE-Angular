@@ -19,11 +19,9 @@ export class NurseService {
 
   deleteById(id:number) {
     let url = `http://localhost:8000/nurse/deleteById/${id}`;
-    return this.http.delete(
-      url, {
-        headers: new HttpHeaders({'Content-Type': 'application/json'})
-      }
-    );
+    return this.http.delete(url, {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    });
   }
 
   findByName(name: string) {
@@ -33,6 +31,7 @@ export class NurseService {
     });
   }
 
+
   login(email: string, password : string):Observable<any>{
     const datos = { email, password};
     let url = `http://localhost:8000/nurse/login`;
@@ -41,5 +40,13 @@ export class NurseService {
         headers: new HttpHeaders({'Content-Type': 'application/json'})
       }
     ); 
+  }
+
+  registerNurse(nurse: Nurse): Observable<any> {
+    let url = this.url + '/nurse/create';
+
+    return this.http.post(url, nurse, {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    });
   }
 }
