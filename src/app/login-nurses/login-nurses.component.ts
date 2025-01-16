@@ -1,7 +1,7 @@
 import {Component, inject} from '@angular/core';
-/*import { FormControl, FormGroup } from '@angular/forms';*/
+import { FormControl, FormGroup } from '@angular/forms';
 import {NurseService} from '../nurses/nurse.service';
-/*import { Router } from '@angular/router';*/
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login-nurses',
   templateUrl: './login-nurses.component.html',
@@ -9,11 +9,11 @@ import {NurseService} from '../nurses/nurse.service';
   providers: [NurseService],
 })
 export class LoginNursesComponent {
-  /*constructor(private router: Router) {}
+  constructor(private router: Router) {}
   existe: boolean = false;
   email: any = '';
   password: any = '';
-  alumne: any;
+  nurse: any;
   nurseService:NurseService = inject(NurseService);
 
   form = new FormGroup({
@@ -26,14 +26,21 @@ export class LoginNursesComponent {
     this.email = this.form.value.email;
     this.password = this.form.value.password;
 
-    this.alumne = this.nurseService.loginNurse(this.email, this.password);
+    this.nurse = this.nurseService.login(this.email, this.password).subscribe(
+      (result)=>{
+        this.nurse = result;
+      },
+      (error) =>{
+        console.log(error);
+      }
+    );
 
-    if (this.alumne === undefined) {
+    if (this.nurse === undefined) {
       console.log('Email o contraseña incorrecto');
       return;
     } else {
       this.existe = true;
       this.router.navigate(['/getAll']);
     }
-  }*/
+  }
 }

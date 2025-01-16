@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -15,6 +16,7 @@ export class NurseService {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     });
   }
+
   deleteById(id:number) {
     let url = `http://localhost:8000/nurse/deleteById/${id}`;
     return this.http.delete(
@@ -29,5 +31,15 @@ export class NurseService {
     return this.http.get(url, {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     });
+  }
+
+  login(email: string, password : string):Observable<any>{
+    const datos = { email, password};
+    let url = `http://localhost:8000/nurse/login`;
+    return this.http.post(
+      url, datos, {
+        headers: new HttpHeaders({'Content-Type': 'application/json'})
+      }
+    ); 
   }
 }
