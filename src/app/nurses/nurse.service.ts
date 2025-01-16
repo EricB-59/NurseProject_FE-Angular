@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Nurse } from '../nurse';
 
 @Injectable({
   providedIn: 'root',
@@ -15,18 +17,25 @@ export class NurseService {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     });
   }
-  deleteById(id:number) {
+
+  deleteById(id: number) {
     let url = `http://localhost:8000/nurse/deleteById/${id}`;
-    return this.http.delete(
-      url, {
-        headers: new HttpHeaders({'Content-Type': 'application/json'})
-      }
-    );
+    return this.http.delete(url, {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    });
   }
 
   findByName(name: string) {
     let url = this.url + `/nurse/findName/${name}`;
     return this.http.get(url, {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    });
+  }
+
+  registerNurse(nurse: Nurse): Observable<any> {
+    let url = this.url + '/nurse/create';
+
+    return this.http.post(url, nurse, {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     });
   }
