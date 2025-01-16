@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Nurse } from '../nurse';
 
 @Injectable({
   providedIn: 'root',
@@ -32,9 +33,10 @@ export class NurseService {
   }
 
 
-  login(email: string, password : string):Observable<any>{
+  login(email : string , password : string):Observable<any>{
     const datos = { email, password};
-    let url = `http://localhost:8000/nurse/login`;
+    let url = this.url + `/nurse/login`;
+
     return this.http.post(
       url, datos, {
         headers: new HttpHeaders({'Content-Type': 'application/json'})
