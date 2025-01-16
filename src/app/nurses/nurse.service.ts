@@ -7,7 +7,7 @@ import { Nurse } from '../nurse';
   providedIn: 'root',
 })
 export class NurseService {
-  url: string = 'https://localhost:8000';
+  url: string = 'http://localhost:8000';
 
   constructor(private http: HttpClient) {}
 
