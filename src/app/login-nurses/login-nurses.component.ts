@@ -1,6 +1,6 @@
-import {Component, inject} from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import {NurseService} from '../nurses/nurse.service';
+import { NurseService } from '../nurses/nurse.service';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-login-nurses',
@@ -14,33 +14,28 @@ export class LoginNursesComponent {
   email: any = '';
   password: any = '';
   nurse: any;
-  nurseService:NurseService = inject(NurseService);
+  nurseService: NurseService = inject(NurseService);
 
   form = new FormGroup({
     email: new FormControl(''),
-    password: new FormControl('')
+    password: new FormControl(''),
   });
 
-  login(){
+  login() {
     this.existe = false;
     this.email = this.form.value.email;
     this.password = this.form.value.password;
 
     this.nurse = this.nurseService.login(this.email, this.password).subscribe(
-      (result)=>{
+      (result) => {
         this.nurse = result;
+        this.existe = true;
+        this.router.navigate(['/getAll']);
       },
-      (error) =>{
+      (error) => {
+        console.log('Email o contraseña incorrecto');
         console.log(error);
       }
     );
-
-    if (this.nurse === undefined) {
-      console.log('Email o contraseña incorrecto');
-      return;
-    } else {
-      this.existe = true;
-      this.router.navigate(['/getAll']);
-    }
   }
 }
