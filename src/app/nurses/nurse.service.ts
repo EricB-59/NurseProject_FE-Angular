@@ -33,15 +33,13 @@ export class NurseService {
     });
   }
 
-  login(email : string , password : string):Observable<any>{
-    const datos = { email, password};
+  login(email: string, password: string): Observable<any> {
+    const datos = { email, password };
     let url = this.url + `/nurse/login`;
 
-    return this.http.post(
-      url, datos, {
-        headers: new HttpHeaders({'Content-Type': 'application/json'})
-      }
-    ); 
+    return this.http.post(url, datos, {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    });
   }
 
   registerNurse(nurse: Nurse): Observable<any> {
@@ -52,20 +50,17 @@ export class NurseService {
     });
   }
 
-
   updateNurse(nurse: Nurse) {
-    let url = this.url + `/nurse/updateById/${nurse.id}`
-    return this.http.put(
-      url,
-      nurse,
-      { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) }
-    )
+    let url = this.url + `/nurse/updateById/${nurse.id}`;
+    return this.http.put(url, nurse, {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    });
+  }
 
-  
   findByID(id: number) {
     let url = this.url + `/nurse/findByID/${id}`;
     return this.http.get(url, {
-      headers: new HttpHeaders({'Content-Type' : 'application/json'})
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     });
   }
 }
