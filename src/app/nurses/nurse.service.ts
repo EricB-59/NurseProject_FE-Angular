@@ -52,6 +52,7 @@ export class NurseService {
     });
   }
 
+
   updateNurse(nurse: Nurse) {
     let url = this.url + `/nurse/updateById/${nurse.id}`
     return this.http.put(
@@ -59,5 +60,12 @@ export class NurseService {
       nurse,
       { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) }
     )
+
+  
+  findByID(id: number) {
+    let url = this.url + `/nurse/findByID/${id}`;
+    return this.http.get(url, {
+      headers: new HttpHeaders({'Content-Type' : 'application/json'})
+    });
   }
 }
