@@ -8,6 +8,7 @@ import { Nurse } from '../nurse';
 })
 export class NurseService {
   url: string = 'http://localhost:8000';
+  nurseID?: number;
 
   constructor(private http: HttpClient) {}
 
@@ -18,8 +19,8 @@ export class NurseService {
     });
   }
 
-  deleteById(id:number) {
-    let url = `http://localhost:8000/nurse/deleteById/${id}`;
+  deleteById(id: number) {
+    let url = this.url + `/nurse/deleteById/${id}`;
     return this.http.delete(url, {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     });
@@ -31,7 +32,6 @@ export class NurseService {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     });
   }
-
 
   login(email : string , password : string):Observable<any>{
     const datos = { email, password};
@@ -50,5 +50,14 @@ export class NurseService {
     return this.http.post(url, nurse, {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     });
+  }
+
+  updateNurse(nurse: Nurse) {
+    let url = this.url + `/nurse/updateById/${nurse.id}`
+    return this.http.put(
+      url,
+      nurse,
+      { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) }
+    )
   }
 }

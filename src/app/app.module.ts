@@ -10,6 +10,7 @@ import { LoginNursesComponent } from './login-nurses/login-nurses.component';
 import { provideRouter } from '@angular/router';
 import { RegisterNursesComponent } from './register-nurses/register-nurses.component';
 import {provideHttpClient, withFetch} from '@angular/common/http';
+import { UpdateNursesComponent } from './update-nurses/update-nurses.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {provideHttpClient, withFetch} from '@angular/common/http';
     GetAllNursesComponent,
     LoginNursesComponent,
     RegisterNursesComponent,
+    UpdateNursesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [provideHttpClient(withFetch())],
