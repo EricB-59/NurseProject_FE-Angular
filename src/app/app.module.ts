@@ -11,6 +11,7 @@ import { provideRouter } from '@angular/router';
 import { RegisterNursesComponent } from './register-nurses/register-nurses.component';
 import {provideHttpClient, withFetch} from '@angular/common/http';
 import { UpdateNursesComponent } from './update-nurses/update-nurses.component';
+import { DeleteNursesComponent } from './delete-nurses/delete-nurses.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { UpdateNursesComponent } from './update-nurses/update-nurses.component';
     LoginNursesComponent,
     RegisterNursesComponent,
     UpdateNursesComponent,
+    DeleteNursesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [provideHttpClient(withFetch())],
