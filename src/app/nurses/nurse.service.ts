@@ -31,7 +31,12 @@ export class NurseService {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     });
   }
-
+  findByID(id: number) {
+    let url = this.url + `/nurse/findByID/${id}`;
+    return this.http.get(url, {
+      headers: new HttpHeaders({'Content-Type' : 'application/json'})
+    });
+  }
 
   login(email : string , password : string):Observable<any>{
     const datos = { email, password};
