@@ -6,14 +6,12 @@ import { Router } from '@angular/router';
   selector: 'app-login-nurses',
   templateUrl: './login-nurses.component.html',
   styleUrl: './login-nurses.component.css',
-  providers: [NurseService],
 })
 export class LoginNursesComponent {
   constructor(private router: Router) {}
   existe: boolean = false;
   email: any = '';
   password: any = '';
-  nurse: any;
   nurseService: NurseService = inject(NurseService);
 
   form = new FormGroup({
@@ -26,9 +24,9 @@ export class LoginNursesComponent {
     this.email = this.form.value.email;
     this.password = this.form.value.password;
 
-    this.nurse = this.nurseService.login(this.email, this.password).subscribe(
+    this.nurseService.login(this.email, this.password).subscribe(
       (result) => {
-        this.nurse = result;
+        localStorage.setItem('nurseID', result.toString());
         this.existe = true;
         this.router.navigate(['/getAll']);
       },
