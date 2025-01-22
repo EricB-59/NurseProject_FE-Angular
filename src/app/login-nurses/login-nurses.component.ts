@@ -29,6 +29,7 @@ export class LoginNursesComponent {
     this.nurse = this.nurseService.login(this.email, this.password).subscribe(
       (result) => {
         this.nurse = result;
+        console.log(result);
         this.existe = true;
         this.router.navigate(['/getAll']);
       },
