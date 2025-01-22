@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { NurseService } from '../nurses/nurse.service';
 import { Router } from '@angular/router';
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './login-nurses.component.html',
   styleUrl: './login-nurses.component.css',
 })
-export class LoginNursesComponent {
+export class LoginNursesComponent implements OnInit  {
   constructor(private router: Router) {}
   existe: boolean = false;
   email: any = '';
@@ -18,6 +18,10 @@ export class LoginNursesComponent {
     email: new FormControl(''),
     password: new FormControl(''),
   });
+
+  ngOnInit(): void {
+    localStorage.clear();
+  }
 
   login() {
     this.existe = false;
