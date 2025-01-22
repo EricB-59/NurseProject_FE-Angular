@@ -27,7 +27,6 @@ export class LoginNursesComponent {
     this.nurseService.login(this.email, this.password).subscribe(
       (result) => {
         localStorage.setItem('nurseID', result.toString());
-        this.nurse = result;
         console.log(result);
         this.existe = true;
         if (!isNaN(result)) {
