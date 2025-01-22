@@ -5,23 +5,33 @@ import { Nurse } from '../nurse';
 @Component({
   selector: 'app-delete-nurses',
   template: `
-    <p>
-      delete-nurses works!
-    </p>
+   <button (click)="delete()">DELETE</button>
   `,
-  styles: ``
+  styles: `
+  button {
+    color: white;
+    background-color: red;
+    padding: 10px 30px;
+    margin-top: 7px;
+    border-radius: 10px;
+    border: none;
+  }
+  `
 })
 export class DeleteNursesComponent implements OnInit {
 constructor(private nurseService: NurseService) {}
-
+nurseID?: number;
 ngOnInit(): void {
-  if (this.nurseService.nurseID) {
-    this.nurseService.deleteById(this.nurseService.nurseID).subscribe({
+  this.nurseID = Number(localStorage.getItem('nurseID'));
+}
+delete() {
+  if (this.nurseID) {
+    this.nurseService.deleteById(this.nurseID).subscribe({
       next: (result) => { 
-        this.nurseService.nurseID = result;
+        console.info(result);
       },
       error: (err) => {
-        console.log("Id incorrecto!")
+        console.error("Id incorrecto!")
       }
     })
   } else {

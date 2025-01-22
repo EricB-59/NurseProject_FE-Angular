@@ -5,6 +5,7 @@ import { SearchByNameNursesComponent } from './search-by-name-nurses/search-by-n
 import { LoginNursesComponent } from './login-nurses/login-nurses.component';
 import { RegisterNursesComponent } from './register-nurses/register-nurses.component';
 import { UpdateNursesComponent } from './update-nurses/update-nurses.component';
+import { DeleteNursesComponent } from './delete-nurses/delete-nurses.component';
 
 const routes: Routes = [
   { path: '', component: RegisterNursesComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterNursesComponent },
   { path: 'searchByName', component: SearchByNameNursesComponent },
   { path: 'update', component: UpdateNursesComponent },
+  {path: 'delete', component: DeleteNursesComponent},
 ];
 
 @NgModule({
