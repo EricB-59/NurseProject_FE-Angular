@@ -8,36 +8,35 @@ import { Nurse } from '../nurse';
 })
 export class NurseService {
   url: string = 'http://localhost:8000';
-  nurseID?: number;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  getAllNurses() {
+  getAllNurses(): Observable<Nurse[]>  {
     let url = this.url + `/nurse/getAll`;
-    return this.http.get(url, {
+    return this.http.get<Nurse[]>(url, {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     });
   }
 
-  deleteById(id: number) {
+  deleteById(id: number): Observable<boolean> {
     let url = this.url + `/nurse/deleteById/${id}`;
-    return this.http.delete(url, {
+    return this.http.delete<boolean>(url, {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     });
   }
 
-  findByName(name: string) {
+  findByName(name: string): Observable<Nurse> {
     let url = this.url + `/nurse/findName/${name}`;
-    return this.http.get(url, {
+    return this.http.get<Nurse>(url, {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     });
   }
 
-  login(email: string, password: string): Observable<any> {
+  login(email: string, password: string): Observable<number> {
     const datos = { email, password };
     let url = this.url + `/nurse/login`;
 
-    return this.http.post(url, datos, {
+    return this.http.post<number>(url, datos, {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     });
   }
@@ -50,16 +49,16 @@ export class NurseService {
     });
   }
 
-  updateNurse(nurse: Nurse) {
-    let url = this.url + `/nurse/updateById/${nurse.id}`;
-    return this.http.put(url, nurse, {
+  updateNurse(id: number, nurse: Nurse): Observable<boolean> {
+    let url = this.url + `/nurse/updateById/${id}`;
+    return this.http.put<boolean>(url, nurse, {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     });
   }
 
-  findByID(id: number) {
+  findByID(id: number): Observable<Nurse> {
     let url = this.url + `/nurse/findByID/${id}`;
-    return this.http.get(url, {
+    return this.http.get<Nurse>(url, {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     });
   }
