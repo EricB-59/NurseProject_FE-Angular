@@ -1,24 +1,25 @@
 <nav>
-    <a class="button" routerLink="/getAll">GetAll</a>
-    <a class="button" id="logout" routerLink="/register">Logout</a>
+  <a class="button" routerLink="/getAll">GetAll</a>
+  <a class="button" id="logout" routerLink="/register">Logout</a>
 </nav>
 
 <form [formGroup]="form" (submit)="searchByName()">
-    <label for="name" id="nameLabel"> NAME </label>
-    <input type="text" formControlName="name" id="nameInput">
-    <button type="submit" id="button"> CLICK ME</button>
+  <label for="name" id="nameLabel"> NAME </label>
+  <input type="text" formControlName="name" id="nameInput" />
+  <button type="submit" id="button">CLICK ME</button>
 </form>
 
 @if(data){
 <div id="correct">
-    <div *ngFor="let a of data">
-        <p class="valores">First Name > {{a.first_name}} </p><br>
-        <p class="valores">Last Name > {{a.last_name}} </p><br>
-        <p class="valores">Email > {{a.email}} </p><br>
-    </div>
+  <div *ngFor="let a of data">
+    <p class="valores">First Name > {{ a.first_name }}</p>
+    <br />
+    <p class="valores">Last Name > {{ a.last_name }}</p>
+    <br />
+    <p class="valores">Email > {{ a.email }}</p>
+    <br />
+  </div>
 </div>
-}
-@else {
-<p>{{'entra error'}}</p>
-<div id="incorrect"> No se ha encontrado ningún enfermero con ese nombre.</div>
+} @else {
+<div id="incorrect">No se ha encontrado ningún enfermero con ese nombre.</div>
 }
