@@ -25,9 +25,9 @@ export class NurseService {
     });
   }
 
-  findByName(name: string): Observable<Nurse> {
+  findByName(name: string): Observable<Nurse[]> {
     let url = this.url + `/nurse/findName/${name}`;
-    return this.http.get<Nurse>(url, {
+    return this.http.get<Nurse[]>(url, {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     });
   }
