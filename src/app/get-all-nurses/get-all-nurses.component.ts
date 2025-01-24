@@ -1,14 +1,11 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NurseService } from '../nurses/nurse.service';
-import { Router } from '@angular/router';
 import { Nurse } from '../nurse';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-get-all-nurses',
   templateUrl: './get-all-nurses.component.html',
   styleUrl: './get-all-nurses.component.css',
-  providers: [NurseService]
 })
 export class GetAllNursesComponent implements OnInit {  
 

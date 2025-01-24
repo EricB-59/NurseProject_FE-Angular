@@ -1,6 +1,7 @@
-import { Component, input, inject } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { NurseService } from '../nurses/nurse.service';
+import { Nurse } from '../nurse';
 
 
 @Component({
@@ -10,42 +11,34 @@ import { NurseService } from '../nurses/nurse.service';
 })
 
 
-export class SearchByNameNursesComponent {
-/*
+export class SearchByNameNursesComponent implements OnInit {
 
-  nurseService : NurseService = inject(NurseService);
+  nurseID?: number
+  data?: Nurse[];
+  constructor(private nurseService: NurseService) { }
 
-  nurse: any;
-
-
-  searchName = new FormGroup({
+  form = new FormGroup({
     name: new FormControl('')
   });
 
-  searched: boolean = false;
-  nameSearched: String = '';
-  lastName: String = '';
-  email: String = '';
-
-  submitSearch(){
-    this.nameSearched = '';
-    this.lastName = '';
-    this.email = '';
-    this.searched = false;
-
-    this.nurse = this.nurseService.searchByNameNurse(this.searchName.value.name?.toUpperCase());
-
-    if (this.nurse === undefined){
-      console.log("NO ENCONTRADO");
-      return;
-    } else {
-      this.searched = true;
-      this.nameSearched = this.nurse['first_name'];
-      this.lastName = this.nurse['last_name'];
-      this.email = this.nurse['email'];
+  ngOnInit(): void {
+    if (localStorage.getItem('nurseID')) {
+        this.nurseID = Number(localStorage.getItem('nurseID'))
     }
-
   }
-*/
 
+  searchByName() {
+    let name = this.form.value.name;
+    if (this.nurseID && name) {
+      this.nurseService.findByName(name).subscribe({
+        next: (result) => {
+          this.data = result
+          console.log(this.data)
+        },
+        error: (err) => {
+          console.error(err)
+        }
+      })
+    }
+  }
 }

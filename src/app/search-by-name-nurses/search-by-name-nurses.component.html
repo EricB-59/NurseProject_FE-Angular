@@ -1,22 +1,24 @@
-<!--
 <nav>
     <a class="button" routerLink="/getAll">GetAll</a>
     <a class="button" id="logout" routerLink="/register">Logout</a>
 </nav>
 
-<form [formGroup]="searchName" (submit)="submitSearch()">
+<form [formGroup]="form" (submit)="searchByName()">
     <label for="name" id="nameLabel"> NAME </label>
     <input type="text" formControlName="name" id="nameInput">
     <button type="submit" id="button"> CLICK ME</button>
 </form>
 
-@if(searched){
+@if(data){
 <div id="correct">
-    <p class="valores">First Name > {{nameSearched}} </p><br>
-    <p class="valores">Last Name > {{lastName}} </p><br>
-    <p class="valores">Email > {{email}} </p><br>
+    <div *ngFor="let a of data">
+        <p class="valores">First Name > {{a.first_name}} </p><br>
+        <p class="valores">Last Name > {{a.last_name}} </p><br>
+        <p class="valores">Email > {{a.email}} </p><br>
+    </div>
 </div>
 }
 @else {
-<div id="incorrect"> NO ENCONTRADO</div>
-}-->
+<p>{{'entra error'}}</p>
+<div id="incorrect"> No se ha encontrado ningún enfermero con ese nombre.</div>
+}
