@@ -1,44 +1,78 @@
 <form [formGroup]="form" (submit)="update()">
+  <label>
+    First Name:
+    <br />
+    <input
+      type="text"
+      formControlName="first_name"
+      placeholder="First name"
+      [value]="nurseData?.first_name"
+    />
+  </label>
+  <br />
+  <br />
+  <label>
+    Last Name:
+    <br />
+    <input
+      type="text"
+      formControlName="last_name"
+      placeholder="Last name"
+      [value]="nurseData?.last_name"
+    />
+  </label>
+  <br />
+  <br />
+  <label>
+    Email:
+    <br />
+    <input
+      type="email"
+      formControlName="email"
+      placeholder="Email"
+      [value]="nurseData?.email"
+    />
+  </label>
+  <br />
+  <br />
+  <label>
     <label>
-      First Name:
-      <br />
-      <input type="text" formControlName="first_name" placeholder="First name" [value]="nurseData?.first_name"/>
-    </label>
-    <br />
-    <br />
-    <label>
-      Last Name:
-      <br />
-      <input type="text" formControlName="last_name" placeholder="Last name" [value]="nurseData?.last_name"/>
-    </label>
-    <br />
-    <br />
-    <label>
-      Email:
-      <br />
-      <input type="email" formControlName="email" placeholder="Email" [value]="nurseData?.email"/>
-    </label>
-    <br />
-    <br />
-    <label>
-      Password:
-      <br />
-      <input type="password" formControlName="password" placeholder="Password" [value]="nurseData?.password"/>
-    </label>
-    <br />
-    <br />
-    <label>
-      Repeat Password:
-      <br />
+      Profile image
       <input
-        type="password"
-        formControlName="repeat_password"
-        placeholder="Repeat Password"
-        [value]="nurseData?.password"
+        type="file"
+        name="profileImg"
+        id="profileImg"
+        (change)="onFileChange($event)"
+        #fileInput
       />
     </label>
+  </label>
+  <br />
+  <br />
+  <label>
+    Password:
     <br />
+    <input
+      type="password"
+      formControlName="password"
+      placeholder="Password"
+      [value]="nurseData?.password"
+    />
+  </label>
+  <br />
+  <br />
+  <label>
+    Repeat Password:
     <br />
-    <button type="submit">Update</button>
-  </form>
-<app-delete-nurses/>
+    <input
+      type="password"
+      formControlName="repeat_password"
+      placeholder="Repeat Password"
+      [value]="nurseData?.password"
+    />
+  </label>
+  <br />
+  <br />
+  <button type="submit">Update</button>
+</form>
+<app-delete-nurses />
