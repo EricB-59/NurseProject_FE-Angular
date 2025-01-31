@@ -3,6 +3,7 @@ export class Nurse {
   first_name?: string; // El ? indica que es opcional
   last_name?: string; // El ? indica que es opcional
   email: string;
+  profileImg: string;
   password: string;
 
   constructor(
@@ -12,12 +13,14 @@ export class Nurse {
       first_name,
       last_name,
       email,
+      profileImg,
       password,
     }: {
       id?: number;
       first_name?: string;
       last_name?: string;
       email: string;
+      profileImg: string;
       password: string;
     }
   ) {
@@ -25,6 +28,7 @@ export class Nurse {
     this.first_name = first_name;
     this.last_name = last_name;
     this.email = email;
+    this.profileImg = profileImg;
     this.password = password;
   }
 }

@@ -25,6 +25,18 @@
   <br />
   <br />
   <label>
+    Profile image
+    <input
+      type="file"
+      name="profileImg"
+      id="profileImg"
+      (change)="onFileChange($event)"
+      #fileInput
+    />
+  </label>
+  <br />
+  <br />
+  <label>
     Password:
     <br />
     <input type="password" formControlName="password" placeholder="Password" />

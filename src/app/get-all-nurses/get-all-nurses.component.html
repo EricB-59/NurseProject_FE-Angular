@@ -1,20 +1,19 @@
 <nav>
-    <a class="button" routerLink="/searchByName">SearchByName</a>
-    <a class="button" id="logout" routerLink="/register">Logout</a>
+  <a class="button" routerLink="/searchByName">SearchByName</a>
+  <a class="button" id="logout" routerLink="/register">Logout</a>
 </nav>
 
 <table>
-    <tr>
-        <th>First Name:</th>
-        <th>Last Name</th>
-        <th>Email</th>
-        <th>Profile</th>
-    </tr>
-    <tr *ngFor="let nurse of nurses; let i = index">
-        <td>{{nurse.first_name}}</td>
-        <td>{{nurse.last_name}}</td>
-        <td>{{nurse.email}}</td>
-        <!-- <td><img src={{nurse.src}} alt=""></td> -->
-    </tr>
-
+  <tr>
+    <th>First Name:</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Profile</th>
+  </tr>
+  <tr *ngFor="let nurse of nurses; let i = index">
+    <td>{{ nurse.first_name }}</td>
+    <td>{{ nurse.last_name }}</td>
+    <td>{{ nurse.email }}</td>
+    <td><img src="{{ nurse.profileImg }}" alt="" /></td>
+  </tr>
 </table>

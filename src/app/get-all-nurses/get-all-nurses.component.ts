@@ -7,8 +7,7 @@ import { Nurse } from '../nurse';
   templateUrl: './get-all-nurses.component.html',
   styleUrl: './get-all-nurses.component.css',
 })
-export class GetAllNursesComponent implements OnInit {  
-
+export class GetAllNursesComponent implements OnInit {
   nurses: Nurse[] = [];
 
   constructor(private _userService: NurseService) {}
@@ -22,5 +21,6 @@ export class GetAllNursesComponent implements OnInit {
 
   listNurses(data: any) {
     this.nurses = data;
+    console.log(data);
   }
 }
